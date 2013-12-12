@@ -1,5 +1,168 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <style name="AppTheme" parent="Theme.Sherlock.Light" />
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.Sherlock.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
 
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="DialogTheme" parent="@style/Theme.Sherlock.Dialog">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+
+    <style name="orders_patient_count">
+        <item name="android:background">#CCC</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    
+    
+    <!-- patient info -->
+    <style name="patient_name">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="patient_demographics">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+    <style name="patient_id">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+    
+    <!-- item_notification -->
+	<style name="item_notification">
+        <item name="android:padding">5dp</item>
+    </style>
+    
+        
+    <style name="item_notification_thumbnail_container">
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="item_notification_thumbnail">
+        <!-- <item name="android:layout_marginRight">10dp</item> -->
+    </style>
+
+    <style name="item_notification_name">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_notification_description">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+
+    <style name="item_notification_date">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textColor">#999</item>
+    </style>
+
+    <style name="item_notification_state">
+        <item name="android:background">#CCC</item>
+        <item name="android:padding">2dp</item>
+    </style>
+
+    <!-- item account -->
+    <style name="item_account">
+        <item name="android:padding">5dp</item>
+    </style>
+    
+    <style name="item_account_thumbnail_container">
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="item_account_thumbnail">
+        <!-- <item name="android:layout_marginRight">10dp</item> -->
+    </style>
+
+    <style name="item_account_hostname">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_account_username">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textColor">#999</item>
+    </style>
+
+	<!-- item search -->
+    <style name="item_search">
+        <item name="android:padding">5dp</item>
+    </style>
+    
+    <style name="item_search_name">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+	<style name="item_search_demographics">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+    
+    <style name="item_search_patient_id">
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+		
+        
+    <style name="item_search_patient_order_count">
+        <item name="android:background">#CCC</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    
+	<!-- item_order -->
+	<style name="item_order">
+        <item name="android:padding">5dp</item>
+    </style>
+    
+    <style name="item_order_thumbnail_container">
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="item_order_thumbnail">
+        <!-- <item name="android:layout_marginRight">10dp</item> -->
+    </style>
+
+    <style name="item_order_name">
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="item_order_description">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+    </style>
+
+    <style name="item_order_date">
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:textColor">#999</item>
+    </style>
+
+    <style name="item_order_state">
+        <item name="android:background">#CCC</item>
+        <item name="android:padding">2dp</item>
+    </style>
+    
 </resources>

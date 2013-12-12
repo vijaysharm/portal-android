@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/item_account" >
+
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        style="@style/item_account_thumbnail_container">
+ 
+        <ImageView
+            android:id="@+id/account_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:background="@drawable/ic_launcher"
+            style="@style/item_account_thumbnail" />
+ 
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/account_hostname_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        style="@style/item_account_hostname" />
+
+    <TextView
+        android:id="@+id/account_username_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/account_hostname_textview"
+        android:layout_toRightOf="@id/thumbnail"
+        style="@style/item_account_username" />
+
+    <CheckBox
+        android:id="@+id/account_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:focusable="false" />
+
+</RelativeLayout>

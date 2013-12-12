@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.intelerad.android.portal"
     android:versionCode="1"
@@ -5,23 +6,92 @@
 
     <uses-sdk
         android:minSdkVersion="8"
-        android:targetSdkVersion="15" />
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
 
     <application
+        android:name="com.intelerad.android.portal.PortalApplication"
+        android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:label="@string/app_name" >
         <activity
-            android:name=".ui.PortalLogin"
-            android:label="@string/title_portal_login_activity" >
+            android:name="com.intelerad.android.portal.NotificationActivity"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.intelerad.android.portal.AccountsActivity"
+            android:label="@string/title_activity_accounts"
+            android:theme="@style/AppTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:exported="false" android:name=".ui.phone.PatientSearchActivty"></activity>
-        <activity android:exported="false" android:name=".ui.phone.NotificationActivity"></activity>
+        <activity
+            android:name="com.intelerad.android.portal.LoginActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.intelerad.android.portal.CaseViewerActivity"
+            android:label="@string/title_activity_case_viewer"
+            android:theme="@style/AppTheme" >
+        </activity>
+        <activity
+            android:name="com.intelerad.android.portal.SearchActivity"
+            android:label="@string/title_activity_search"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="com.intelerad.android.portal.DatasetSelectorActivity"
+            android:label="@string/title_activity_dataset_selector" >
+        </activity>
+        <activity
+            android:name="com.intelerad.android.portal.DatasetViewerActivityty"
+            android:label="@string/title_activity_dataset_viewer" >
+        </activity>
+        <activity
+            android:name="com.intelerad.android.portal.OrderListActivity"
+            android:label="@string/title_activity_order_list"
+            android:theme="@style/AppTheme" >
+        </activity>
+
+        <service
+            android:name="com.intelerad.android.portal.PortalAuthenticationService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":auth" >
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+        <service
+            android:name="com.intelerad.android.portal.ImageLoadingService"
+            android:enabled="true" >
+        </service>
+
+        <meta-data
+            android:name="android.app.default_searchable"
+            android:value="com.intelerad.android.portal.SearchActivity" />
     </application>
 
 </manifest>

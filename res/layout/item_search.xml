@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/item_search" >
+
+    <TextView
+        android:id="@+id/search_patient_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        style="@style/item_search_name" />
+
+    <TextView
+        android:id="@+id/search_demographics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/search_patient_name"
+        style="@style/item_search_demographics" />
+
+    <TextView
+        android:id="@+id/search_patient_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/search_demographics"
+        style="@style/item_search_patient_id" />
+
+    <TextView
+        android:id="@+id/search_patient_order_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/search_patient_name"
+        style="@style/item_search_patient_order_count" />
+
+</RelativeLayout>

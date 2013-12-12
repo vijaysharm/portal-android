@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    style="@style/item_notification" >
+    
+    <!--  ListRow Left sied Thumbnail image -->
+    <LinearLayout android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        style="@style/item_notification_thumbnail_container">
+ 
+        <ImageView
+            android:id="@+id/notification_image"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            style="@style/item_notification_thumbnail"
+            android:layout_gravity="center" />
+ 
+    </LinearLayout>
+    
+    <TextView
+        android:id="@+id/notification_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/thumbnail"
+        android:layout_toRightOf="@+id/thumbnail"
+        style="@style/item_notification_name" />
+    
+    <TextView
+        android:id="@+id/notification_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_name"
+        android:layout_toRightOf="@id/thumbnail"
+        style="@style/item_notification_description" />
+
+   <TextView
+        android:id="@+id/notification_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_description"
+        android:layout_toRightOf="@+id/thumbnail"
+        style="@style/item_notification_date" />
+   
+    <TextView
+        android:id="@+id/notification_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/notification_name"
+        android:gravity="right"
+        android:text="@string/pending_label"
+        style="@style/item_notification_state" />
+    
+</RelativeLayout>

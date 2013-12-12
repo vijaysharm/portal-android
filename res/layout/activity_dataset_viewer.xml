@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/datasetViewerActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    tools:context=".DatasetViewerActivity"
+    tools:ignore="NewApi" >
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Tool1" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button1"
+        android:text="Tool2" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/button2"
+        android:text="Tool3" />
+
+    <HorizontalScrollView
+        android:id="@+id/datasetScrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/button1" >
+
+        <LinearLayout
+            android:id="@+id/datasetScrollLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+<!-- 
+            <ImageButton
+                android:id="@+id/imageButton1"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_margin="4dp"
+                android:onClick="@string/password"
+                android:scaleType="centerInside"
+                android:src="@raw/stub_image_1" />
+
+            <ImageButton
+                android:id="@+id/imageButton2"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                android:src="@raw/stub_image_2" />
+
+            <ImageButton
+                android:id="@+id/imageButton3"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_margin="4dp"
+                android:scaleType="centerInside"
+                android:src="@raw/stub_image_3" />
+
+            <ImageButton
+                android:id="@+id/imageButton4"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_margin="4dp"
+                android:maxHeight="128dp"
+                android:maxWidth="128dp"
+                android:scaleType="centerInside"
+                android:src="@raw/stub_image_4" />
+-->
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <GridView
+        android:id="@+id/datasetGridView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/datasetScrollView"
+        android:numColumns="2" >
+    </GridView>
+
+</RelativeLayout>
